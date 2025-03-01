@@ -1,0 +1,97 @@
+﻿<Window x:Class="CRM_Programm.View.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRM_Programm.View"
+        mc:Ignorable="d"
+        Title="Artist Profile" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <!-- Для изображения артиста -->
+            <ColumnDefinition Width="*" />
+            <!-- Для остального содержимого -->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!-- Для имени артиста -->
+            <RowDefinition Height="Auto" />
+            <!-- Для описания артиста -->
+            <RowDefinition Height="*" />
+            <!-- Для списка ссылок -->
+            <RowDefinition Height="Auto" />
+            <!-- Для кнопок управления -->
+        </Grid.RowDefinitions>
+
+        <!-- Изображение артиста -->
+        <Image Source="\Resources\5303168671138574150.jpg"
+               Grid.Row="0" 
+               Grid.RowSpan="2" 
+               Grid.Column="0" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Width="200" 
+               Height="200"/>
+
+        <!-- Имя артиста -->
+        <TextBox Text="{Binding ArtistName}" 
+                 Grid.Row="0" 
+                 Grid.Column="1" 
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Top" 
+                 Width="Auto" 
+                 Margin="10,0,0,0"/>
+
+        <!-- Описание артиста -->
+        <TextBox Text="{Binding Description}" 
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Top" 
+                 Height="100" 
+                 Margin="10,0,0,0"/>
+
+        <!-- Список ссылок -->
+        <ListView ItemsSource="{Binding Links}" 
+                  Grid.Row="2" 
+                  Grid.Column="0" 
+                  Grid.ColumnSpan="2" 
+                  HorizontalAlignment="Stretch" 
+                  VerticalAlignment="Stretch" 
+                  Margin="0,10,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название ссылки" 
+                                    DisplayMemberBinding="{Binding Name}"
+                                    Width="auto"/>
+                    <GridViewColumn Header="URL" 
+                                    DisplayMemberBinding="{Binding Url}"
+                                    Width="auto"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Кнопки управления -->
+        <StackPanel Orientation="Horizontal" 
+                    Grid.Row="3" 
+                    Grid.Column="0" 
+                    Grid.ColumnSpan="2" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Bottom" 
+                    Margin="0,10,0,0">
+            <Button Name="AddLinkBtn"
+                    Content="Добавить ссылку"
+                    Click="AddLinkBtn_Click"
+                    Width="150"
+                    Height="50"
+                    Margin="5"/>
+            <Button Name="DeleteLinkBtn" 
+                    Content="Удалить ссылку"
+                    Click="DeleteLinkBtn_Click"
+                    Width="150"
+                    Height="50"
+                    Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

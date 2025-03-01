@@ -1,0 +1,31 @@
+﻿<Window x:Class="ArtistCRM.View.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArtistCRM.View"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="350" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="\Resources\Безымянный-1-2.jpg" Width="50" Margin="318,-5,10,5"/>
+
+        <Label Content="Имя пользователя:" Grid.Row="0" Margin="5"/>
+        <TextBox Name="txtUsername" Grid.Row="1" Margin="5"/>
+
+        <Label Content="Пароль:" Grid.Row="2" Margin="5"/>
+        <PasswordBox Name="txtPassword" Grid.Row="3" Margin="5"/>
+
+        <Button Grid.Row="4" Name="LoginBtn" Click="LoginBtn_Click" Content="Войти" Height="30" Width="130"/>
+        <Button Grid.Row="5" Name="RegistrationBtn" Click="RegistrationBtn_Click" Content="Регистрация" Height="30" Width="130"/>
+        
+    </Grid>
+</Window>

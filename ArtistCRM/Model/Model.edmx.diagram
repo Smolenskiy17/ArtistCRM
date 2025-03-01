@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e93733543a0749499c8f3b0e2bf2be0e" Name="Diagram1">
+        <EntityTypeShape EntityType="ArtistCRMModel.Profiles" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArtistCRMModel.Tracks" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ArtistCRMModel.TrackStatistics" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="ArtistCRMModel.FK__TrackStat__Track__4CA06362" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ArtistCRMModel.User" Width="1.5" PointX="0.75" PointY="1" />
+        <AssociationConnector Association="ArtistCRMModel.FK__Profiles__UserID__5165187F" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
