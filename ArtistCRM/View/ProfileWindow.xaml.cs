@@ -47,16 +47,9 @@ namespace ArtistCRM.View
                 }
             }
         }
-        private void EditProfileBtn_Click(object sender, RoutedEventArgs e)
-        {
-            EditProfileWindow editProfileWindow = new EditProfileWindow(_userId);
-            editProfileWindow.ShowDialog();
-        }
-
         private void StaticsBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            Close();
         }
     }
 }

@@ -28,9 +28,8 @@
         <TextBlock Name="FirstNameTb" Grid.Row="4" Margin="5" Width="Auto" Height="Auto"/>
 
         <Label Content="Биография:" Grid.Row="5" Margin="5" Width="Auto" Height="Auto"/>
-        <TextBlock Name="BiographyTb" TextWrapping="Wrap" Grid.Row="6" Margin="5" Width="Auto" Height="Auto"/>
+        <TextBlock Grid.RowSpan="2" Name="BiographyTb" TextWrapping="Wrap" Grid.Row="6" Margin="5" Width="Auto" Height="Auto"/>
 
-        <Button Grid.Row="7" Name="EditProfileBtn" Click="EditProfileBtn_Click" Content="Редактировать профиль" Margin="5" Height="20" Width="200"/>
         <Button Grid.Row="8" Name="StaticsBtn" Click="StaticsBtn_Click" Content="Статистика" Margin="5" Height="20" Width="130"/>
     </Grid>
 </Window>
