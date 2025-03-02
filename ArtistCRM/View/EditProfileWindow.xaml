@@ -13,23 +13,24 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Image Source="\Resources\Безымянный-1-2.jpg" Width="50" Margin="318,-5,10,5"/>
+        <Image Source="\Resources\Безымянный-1-2.jpg" Width="60"/>
         
-        <Label Content="Псевдоним:" Grid.Row="0" Margin="5" Width="Auto" Height="Auto"/>
-        <TextBox Name="NicknameTb" Grid.Row="1" Margin="5" Width="Auto" Height="Auto"/>
+        <Label Content="Псевдоним:" Grid.Row="1" Margin="5" Width="Auto" Height="Auto"/>
+        <TextBox Name="NicknameTb" Grid.Row="2" Margin="5" Width="Auto" Height="Auto"/>
 
-        <Label Content="Имя:" Grid.Row="2" Margin="5" Width="Auto" Height="Auto"/>
-        <TextBox Name="FirstNameTb" Grid.Row="3" Margin="5" Width="Auto" Height="Auto"/>
+        <Label Content="Имя:" Grid.Row="3" Margin="5" Width="Auto" Height="Auto"/>
+        <TextBox Name="FirstNameTb" Grid.Row="4" Margin="5" Width="Auto" Height="Auto"/>
 
-        <Label Content="Биография:" Grid.Row="4" Margin="5" Width="Auto" Height="Auto"/>
-        <TextBox Name="BiographyTb" TextWrapping="Wrap" Grid.Row="5" Margin="5" Width="Auto" Height="Auto"/>
+        <Label Content="Биография:" Grid.Row="5" Margin="5" Width="Auto" Height="Auto"/>
+        <TextBox Name="BiographyTb" TextWrapping="Wrap" Grid.Row="6" Margin="5" Width="Auto" Height="Auto"/>
 
-        <Button Grid.Row="6" Name="SaveBtn" Click="SaveBtn_Click" Content="Сохранить" Margin="5" Height="20" Width="130"/>
-        <Button Grid.Row="7" Name="CancelBtn" Click="CancelBtn_Click" Content="Отмена" Margin="5" Height="20" Width="130"/>
+        <Button Grid.Row="7" Name="SaveBtn" Click="SaveBtn_Click" Content="Сохранить" Margin="5" Height="20" Width="130"/>
+        <Button Grid.Row="8" Name="CancelBtn" Click="CancelBtn_Click" Content="Отмена" Margin="5" Height="20" Width="130"/>
     </Grid>
 </Window>
