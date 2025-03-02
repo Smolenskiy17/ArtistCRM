@@ -46,8 +46,5 @@
                 </TabControl>
             </Grid>
         </DockPanel>
-
-        <Image Source="\Resources\Безымянный-1-2.jpg" Width="50" Height="50" Margin="388,-4,10,286"/>
-
     </Grid>
 </Window>
